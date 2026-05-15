@@ -1,0 +1,134 @@
+:root{
+    /* ### Primary  */
+
+--Green-500:hsl(158, 36%, 37%);
+--Green-700: hsl(158, 42%, 18%);
+
+/* ### Neutral */
+
+--Black: hsl(212, 21%, 14%);
+--Grey: hsl(228, 12%, 48%);
+--Cream: hsl(30, 38%, 92%);
+--White: hsl(0, 0%, 100%);
+}
+
+ /* font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0; */
+
+
+/* font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal; */
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+body{
+  font-family: "Fraunces", serif;
+  padding: 2em 0;
+  font-size: 14px;
+  background-color:var(--Cream);
+}
+.product_container{
+  background-color: var(--White);
+  width: 90%;
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+.mobile__image{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.product_body{
+  margin: 1.5em;
+}
+.caption{
+  font-family: "Montserrat", sans-serif;
+  color:var(--Grey);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+h1{
+  font-weight: 700;
+  line-height: 0.9;
+  margin-bottom: 0.5em;
+}
+.product__info{
+  font-weight: 500;
+  color: var(--Grey);
+  margin-bottom: 1em;
+}
+.price{
+  display: flex;
+  align-items: center;
+  gap:1em;
+  margin-bottom: 1em;
+  color:var(--Green-500) ;
+}
+span{
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+del{
+  color: var(--Grey);
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em 0; 
+  width: 100%;
+  border: none;
+  background-color: var(--Green-500);
+  border-radius: 0.5em;
+  color: var(--White);
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover,.btn:focus{
+  background-color: var(--Green-700);
+}
+
+@media (min-width:768px){
+.product_container{
+  width: 40%;
+  max-width: none;
+  margin: 0 auto;
+  flex-direction: row;
+}
+.product__img{
+ width: 100%;
+}
+.product_body{
+  width: 100%;
+  margin: 3em 2em ;
+}
+.caption{
+  margin-bottom: 2.5em;
+}
+h1{
+  margin-bottom: 1.5em;
+}
+.product__info{
+  margin-bottom: 2.5em;
+}
+.price{
+  margin-bottom: 2.5em;
+}
+}
